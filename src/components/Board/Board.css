@@ -35,8 +35,11 @@ body {
 }
 
 @media (max-width: 500px) {
+    .board {
+        width: 90%;
+        height: 90%;}
     .cards {
-        width:100%;
+        width:95%;
         grid-template-columns: 100px 100px 100px;
     }
     .fab-container {display:none;}
