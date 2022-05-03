@@ -1,7 +1,7 @@
 {
   "name": "pokegames",
   "private": true,
-  "homepage": "https://github.com/echudev/pokemem",
+  "homepage": "https://echudev.github.io/pokemem/",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
