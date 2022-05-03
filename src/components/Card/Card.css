@@ -157,7 +157,7 @@ img {
     text-shadow: .5px .5px rgba(0, 0, 0, 0.466), -.5px -.5px rgba(0, 0, 0, 0.364);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .card-bottom {display:none;}
     .card {min-height: 105px; width: 85px;}
     .card-name {font-size:xx-small;}

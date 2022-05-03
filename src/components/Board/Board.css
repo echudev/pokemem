@@ -34,10 +34,10 @@ body {
     transition: .3s;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .cards {
         width:100%;
-        grid-gap:5px;
+        grid-template-columns: 100px 100px 100px;
     }
     .fab-container {display:none;}
 }
