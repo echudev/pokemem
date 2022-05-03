@@ -110,7 +110,7 @@ export const Board = () => {
                 color="error"
                 aria-label="back"
                 size="small"
-                style={{ position: 'relative', right: '30px' }}
+                style={{ position: 'relative', right: '20px', margin: '10px' }}
                 onClick={() => setOpen2(true)}
             >
                 <Tooltip title="volver">

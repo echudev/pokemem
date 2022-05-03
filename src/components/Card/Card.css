@@ -157,6 +157,14 @@ img {
     text-shadow: .5px .5px rgba(0, 0, 0, 0.466), -.5px -.5px rgba(0, 0, 0, 0.364);
 }
 
+@media (max-width: 600px) {
+    .card-bottom {display:none;}
+    .card {min-height: 105px; width: 85px;}
+    .card-name {font-size:xx-small;}
+    .card-header{height: 18%; margin: 2px;}
+}
+
+
 /*****  card type color *******/
 .normal {
     background-color: #f2f2f2b9;
