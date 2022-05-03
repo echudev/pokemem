@@ -1,0 +1,234 @@
+.card-container {
+    position: relative;
+    perspective: 1000px;
+
+    margin: 10px 5px;
+
+    user-select: none;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.card {
+    transform-style: preserve-3d;
+    transition: all 0.3s linear;
+
+    min-height: 170px;
+    width: 100px;
+}
+
+.rotate{
+    transform: rotateY(180deg);
+}
+.hide {
+    opacity: 0;
+}
+
+.card-front {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+
+    height: 100%;
+    width: 100%;
+
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.683), -1px -1px 2px rgba(0, 0, 0, 0.683);
+    border-radius: 10px;
+    background-color: rgb(191, 153, 0);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-back {
+    position: absolute;
+    backface-visibility: hidden;
+
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.683), -1px -1px 2px rgba(0, 0, 0, 0.683);
+    background-color: rgb(0, 4, 109);
+    border-radius: 10px;
+    border: 2px solid rgb(1, 1, 79);
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card-back:hover{
+    filter:brightness(1.5);
+}
+.back-logo {
+    height: 80%;
+    width: 80%;
+
+    background-image: url("./pokemon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.card-body {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+
+    height: 95%;
+    width: 95%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header {
+    font-size: small;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    margin: 5px;
+    width: 95%;
+    height: 20%;
+
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-name {
+    display: flex;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.749);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-img {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: flex;
+
+    width: 95%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(2px 2px 6px rgb(0, 0, 0));
+}
+
+.card-bottom {
+    display: flex;
+    flex-direction: row;
+    text-transform: capitalize;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    width: 95%;
+
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 2px 0;
+
+    font-size: small;
+}
+
+.type {
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+    font-style: italic;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.778);
+}
+.card-id {
+    color: rgba(150, 0, 0, 0.9);
+    font-size:smaller;
+    text-shadow: .5px .5px rgba(0, 0, 0, 0.466), -.5px -.5px rgba(0, 0, 0, 0.364);
+}
+
+/*****  card type color *******/
+.normal {
+    background-color: #f2f2f2b9;
+}
+
+.fighting {
+    background-color: #b5654c4e;
+}
+
+.flying {
+    background-color: #a890f0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.ground {
+    background-color: #dd7a6b9a;
+}
+
+.rock {
+    background-color: #facc87d0;
+}
+
+.bug {
+    background-color: #37ff002c;
+}
+
+.ghost {
+    background-color: #ab72fbd4;
+}
+
+.steel {
+    background-color: #e1e1e3e5;
+}
+
+.fire {
+    background: #f98c3f72;
+}
+
+.water {
+    background-color: #0080ff8f;
+}
+
+.grass {
+    background-color: #00ff6a45;
+}
+
+.electric {
+    background-color: #f8d030;
+}
+
+.psychic {
+    background-color: #7a43fb94;
+}
+
+.ice {
+    background-color: #98d8d8;
+}
+
+.dragon {
+    background: linear-gradient(180deg, #3dc7ef, #b49ffb);
+}
+
+.dark {
+    background: linear-gradient(180deg, #af82f8cb, #000000e7, #8558cecc, #b54597a6);
+}
+
+.fairy {
+    background-color: #ee99bca1;
+}
+
+.unknown {
+    background-color: #6d6d6d;
+}
+
+.shadow {
+    background-color: #00000099;
+}

@@ -1,0 +1,65 @@
+body {
+  background-image: url("../../img/bkg1.svg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  user-select: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.352);
+  padding: 20px;
+  border-radius: 30px;
+}
+.menu h1 {
+  color: rgb(255, 217, 0);
+  text-shadow: 3px 3px 20px rgb(45, 83, 253), -4px -3px 2px rgb(45, 83, 253),4px 5px 3px rgb(45, 83, 253),-3px 4px 2px rgb(30, 63, 206);
+}
+
+#img-title {
+  height: auto;
+  max-width: 350px;
+}
+
+.menu-item {
+  background-color: rgba(128, 0, 255, 0.542);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px black;
+  transition: .3s;
+  font-weight: bold;
+  color: rgb(15, 15, 75);
+
+  animation-name: playtilt;
+  animation-duration: 1s;
+  animation-timing-function:cubic-bezier(1,0,0,1);
+  animation-iteration-count: infinite;
+}
+
+.menu-item:hover {
+  filter: brightness(1.5);
+}
+
+.menu-item:active {
+  transform:scale(0.9);
+}
+
+@keyframes playtilt {
+  100% {
+    background-color: rgba(0, 191, 54, 0.464);
+  }
+}

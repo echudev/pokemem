@@ -1,0 +1,72 @@
+body {
+    background-image: url("../../img/bkg1.svg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.board-container {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 800px;
+    width: 80%;
+    height: 80%;
+}
+
+.cards {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,
+            minmax(50px, 100px));
+    grid-gap: 10px;
+
+    transition: .3s;
+}
+
+.modal-box {
+    min-height: 250px;
+    min-width: 250px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.358);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    transition:.3s;
+}
+
+#modal-modal-description {
+    text-align: center;
+}
+
+#modal-modal-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: rgb(255, 217, 0);
+    text-shadow: 3px 3px 20px rgb(45, 83, 253), -4px -3px 2px rgb(45, 83, 253), 4px 5px 3px rgb(45, 83, 253), -3px 4px 2px rgb(30, 63, 206);
+}
+#modal-modal-title2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgb(255, 217, 0);
+    text-shadow: 3px 3px 20px rgb(45, 83, 253), -4px -3px 2px rgb(45, 83, 253), 4px 5px 3px rgb(45, 83, 253), -3px 4px 2px rgb(30, 63, 206);
+}
+
+#btn-quedarme{
+    font-weight:600 !important;
+}
