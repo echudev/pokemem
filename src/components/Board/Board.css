@@ -34,6 +34,14 @@ body {
     transition: .3s;
 }
 
+@media (max-width: 600px) {
+    .cards {
+        width:100%;
+        grid-gap:5px;
+    }
+    .fab-container {display:none;}
+}
+
 .modal-box {
     min-height: 250px;
     min-width: 250px;
@@ -47,7 +55,7 @@ body {
     justify-content: space-evenly;
     padding: 10px;
 
-    transition:.3s;
+    transition: .3s;
 }
 
 #modal-modal-description {
@@ -60,13 +68,14 @@ body {
     color: rgb(255, 217, 0);
     text-shadow: 3px 3px 20px rgb(45, 83, 253), -4px -3px 2px rgb(45, 83, 253), 4px 5px 3px rgb(45, 83, 253), -3px 4px 2px rgb(30, 63, 206);
 }
-#modal-modal-title2{
+
+#modal-modal-title2 {
     font-weight: bold;
     font-size: 1.5rem;
     color: rgb(255, 217, 0);
     text-shadow: 3px 3px 20px rgb(45, 83, 253), -4px -3px 2px rgb(45, 83, 253), 4px 5px 3px rgb(45, 83, 253), -3px 4px 2px rgb(30, 63, 206);
 }
 
-#btn-quedarme{
-    font-weight:600 !important;
+#btn-quedarme {
+    font-weight: 600 !important;
 }

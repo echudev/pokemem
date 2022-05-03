@@ -106,6 +106,7 @@ export const Board = () => {
     return (
         <div className="board-container">
             {/* boton 'volver' */}
+            <div className="fab-container">
             <Fab
                 color="error"
                 aria-label="back"
@@ -117,6 +118,7 @@ export const Board = () => {
                     <ArrowLeftIcon />
                 </Tooltip>
             </Fab>
+            </div>
             <StyledModal
                 open={open}
                 onClose={handleClose}
