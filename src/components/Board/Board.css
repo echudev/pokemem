@@ -30,6 +30,7 @@ body {
     grid-template-columns: repeat(auto-fit,
             minmax(50px, 100px));
     grid-gap: 10px;
+    justify-content: center;
 
     transition: .3s;
 }
@@ -37,12 +38,17 @@ body {
 @media (max-width: 500px) {
     .board {
         width: 90%;
-        height: 90%;}
+        height: 90%;
+    }
+
     .cards {
-        width:95%;
+        width: 95%;
         grid-template-columns: 100px 100px 100px;
     }
-    .fab-container {display:none;}
+
+    .fab-container {
+        display: none;
+    }
 }
 
 .modal-box {
