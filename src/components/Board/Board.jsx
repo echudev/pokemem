@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Board.css'
-import charmander from '../../img/charmander.gif'
+import pikarun from '../../img/pikarun.gif'
 import { GameContext } from "../../context/GameContext";
 import Card from "../Card/Card";
 import { Button, Fab, Tooltip, Box, Modal, Typography, styled } from '@mui/material';
@@ -40,7 +40,7 @@ export const Board = () => {
     }
 
 
-    //esta función selecciona las cartas cuando el usuario hace click en ellas
+    //selecciona las cartas cuando el usuario hace click en ellas
     const handlerSelectCard = (index, pokemonID) => {
         const newCartas = cartas.map((card, i) => {
             if (card.pokemonID === pokemonID && i === index && card.disabled === false) {
@@ -107,17 +107,17 @@ export const Board = () => {
         <div className="board-container">
             {/* boton 'volver' */}
             <div className="fab-container">
-            <Fab
-                color="error"
-                aria-label="back"
-                size="small"
-                style={{ position: 'relative', right: '20px', margin: '10px' }}
-                onClick={() => setOpen2(true)}
-            >
-                <Tooltip title="volver">
-                    <ArrowLeftIcon />
-                </Tooltip>
-            </Fab>
+                <Fab
+                    color="error"
+                    aria-label="back"
+                    size="small"
+                    style={{ position: 'relative', right: '20px', margin: '10px' }}
+                    onClick={() => setOpen2(true)}
+                >
+                    <Tooltip title="volver">
+                        <ArrowLeftIcon />
+                    </Tooltip>
+                </Fab>
             </div>
             <StyledModal
                 open={open}
@@ -151,9 +151,9 @@ export const Board = () => {
             </StyledModal>
 
             <div className="board">
-                {loading && <img src={charmander}></img>}
+                {loading && <div className='loading-image'><img src={pikarun}></img></div>}
                 {error && <h1>{`error: ${error}`}</h1>}
-                <div className="cards">
+                <div className={loading ? "cards" : "cards fadeIn"}>
                     {cartas && cartas.map((card, key) =>
                         <div
                             key={key}

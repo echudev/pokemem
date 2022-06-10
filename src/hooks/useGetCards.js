@@ -9,34 +9,34 @@ export const useGetCards = (n = 6, handler) => {
         error: null,
         cards: []
     });
-   
+
     const getData = async () => {
         //vacío la mano anterior de cartas
         try {
             //genero una mano de 'n' cantidad de cartas aleatorias
+            var cards = [];
             for (let i = 0; i < n; i++) {
                 let res = await axios(`https://pokeapi.co/api/v2/pokemon/${generateRandom(1, 898)}`)
-                setData(prevData => ({
-                    loading: false,
-                    error: null,
-                    cards: [...prevData.cards, {
-                        pokemonID: res.data.id,
-                        name: res.data.name,
-                        image: res.data.sprites.other.home.front_default,
-                        type: res.data.types[0].type.name,
-                        className: "card",
-                        selected: false,
-                        disabled: false
-                    }]
-                }));
+                cards = [...cards,
+                {
+                    pokemonID: res.data.id,
+                    name: res.data.name,
+                    image: res.data.sprites.other.home.front_default,
+                    type: res.data.types[0].type.name,
+                    className: "card",
+                    selected: false,
+                    disabled: false
+                }
+                ];
             }
             //duplico las cartas y las mezclo
-            setData(prevData => ({
-                ...prevData,
-                cards: shuffleArray([...prevData.cards, ...prevData.cards])
-            }))
-                   
-        } 
+            const shuffledCards = shuffleArray([...cards, ...cards])
+            setData({
+                loading: false,
+                error: null,
+                cards: shuffledCards
+            });
+        }
         catch (error) {
             console.log(error);
         }
