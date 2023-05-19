@@ -7,37 +7,35 @@ import Card from "../Card/Card";
 import { Button, Fab, Tooltip, Box, Modal, Typography, styled } from '@mui/material';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 
-
 export const Board = () => {
-    //traigo datos de la api desde el context
-    const { cards, loading, error } = useContext(GameContext);
-    //paso datos de la api a un estado en este componente para poder alterar el array de cartas
-    const [cartas, setCartas] = useState([]);
-    useEffect(() => {
-        setCartas([...cards]);
-    }, [cards]);
-
-    //estado que abre el modal al terminar la partida
-    const [open, setOpen] = useState(false);
-    const [open2, setOpen2] = useState(false);
-    //estilos del modal
-    const StyledModal = styled(Modal)({
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center'
-    });
-    //evita que cierre el modal al hacer click en el background
-    const handleClose = (event, reason) => {
-        if (reason !== 'backdropClick') {
-            setOpen(false)
-        }
+  // traigo datos de la api desde el context
+  const { cards, loading, error } = useContext(GameContext);
+  // paso datos de la api a un estado en este componente para poder alterar el array de cartas
+  const [cartas, setCartas] = useState([]);
+  useEffect(() => {
+    setCartas([...cards])
+  }, [cards])
+  // estado que abre el modal al terminar la partida
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  // estilos del modal
+  const StyledModal = styled(Modal)({
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  })
+  // evita que cierre el modal al hacer click en el background
+  const handleClose = (event, reason) => {
+    if (reason !== 'backdropClick') {
+      setOpen(false)
     }
+  }
 
-    //empieza una partida nueva
-    const restart = () => {
-        setOpen(false);
-        window.location.reload();
-    }
+  // empieza una partida nueva
+  const restart = () => {
+    setOpen(false)
+    window.location.reload()
+  }
 
 
     //selecciona las cartas cuando el usuario hace click en ellas

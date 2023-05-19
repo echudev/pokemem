@@ -1,9 +1,8 @@
 import React from 'react'
-import './Card.css';
+import './Card.css'
 
-export default function Card(props) {
-
-    return (
+export default function Card (props) {
+  return (
         <div className="card-container">
             <div className={props.className}>
                 <div className="card-front">
@@ -27,5 +26,5 @@ export default function Card(props) {
                 </div>
             </div>
         </div>
-    )
+  )
 }
