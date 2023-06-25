@@ -26,6 +26,6 @@ There are 20 cards, discover in pairs until you have completed them all!
 
 - React.js 
 - React Router v6
-- CSS custom properties
-- MUI 
+- CSS Modules
+- MUI Button
 - API: https://pokeapi.co/
